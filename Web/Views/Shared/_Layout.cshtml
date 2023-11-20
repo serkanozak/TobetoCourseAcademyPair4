@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header>
+        <nav>
+            <a>
+                <img src="/Engin DemirogÌ_ Logo CÌ§alÄ±sÌ§masÄ± 9000x2000.png" />
+            </a>
+        <button>
+        </button>
+        <div locale="tr_TR" lang="tr" class="ud-search-form-autocomplete desktop-header-module--search-bar--2V17S ud-form-group">
+            <label class="ud-sr-only ud-form-label ud-heading-sm" for="u4-search-form-autocomplete--3">Dilediğiniz şeyi arayın</label>
+            <form action="/courses/search/" class="ud-search-form-autocomplete-input-group ud-search-form-autocomplete-input-group-reversed">
+                <input type="hidden" name="src" value="ukw">
+                <input type="text" aria-invalid="false" name="q" data-testid="search-input" placeholder="Dilediğiniz şeyi arayın" autocomplete="off" value="" role="combobox" aria-autocomplete="both" aria-haspopup="true" aria-expanded="false" aria-controls="u4-search-form-autocomplete--3-menu-content-items" id="u4-search-form-autocomplete--3" class="ud-text-input ud-text-input-small ud-text-sm ud-search-form-autocomplete-input js-header-search-field">
+                <button type="submit" disabled="" class="ud-btn ud-btn-large ud-btn-ghost ud-heading-md ud-btn-disabled ud-btn-icon ud-btn-icon-large" tabindex="-1"><svg aria-label="Aramayı gönder" role="img" focusable="false" class="ud-icon ud-icon-medium ud-icon-color-neutral"><use xlink:href="#icon-search"></use></svg></button>
+            </form>
+        </div>
+
+        <div class="collapse btstrp-navbar-collapse navbar-header-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="fedora-navbar-link navbar-link" href="https://www.kodlama.io/p/kariyer" target="">
+                        Kariyer
+                    </a>
+                </li>
+                <li>
+                    <a class="fedora-navbar-link navbar-link" href="https://www.kodlama.io/p/sorular" target="">
+                        Sık Sorulan Sorular
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navbar-link fedora-navbar-link" href="/sign_in">
+                        Giriş Yap
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn-primary pull-right btn-lg" id="header-sign-up-btn" href="/sign_up">
+                        Kayıt Ol
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
